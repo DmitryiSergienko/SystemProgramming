@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{124EBFE2-8DA7-4A56-9E5A-6EC9F478CCFD}</ProjectGuid>
+    <ProjectGuid>{01CB5C6B-4A24-44E5-8859-431E6A3D17D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CalcRunner</RootNamespace>
-    <AssemblyName>CalcRunner</AssemblyName>
+    <RootNamespace>ChildProcess2</RootNamespace>
+    <AssemblyName>ChildProcess2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcRunnerForm.cs">
+    <Compile Include="ChildProcess2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalcRunnerForm.Designer.cs">
-      <DependentUpon>CalcRunnerForm.cs</DependentUpon>
+    <Compile Include="ChildProcess2.Designer.cs">
+      <DependentUpon>ChildProcess2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CalcRunnerForm.resx">
-      <DependentUpon>CalcRunnerForm.cs</DependentUpon>
+    <EmbeddedResource Include="ChildProcess2.resx">
+      <DependentUpon>ChildProcess2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

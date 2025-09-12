@@ -4,12 +4,13 @@ using System.Windows.Forms;
 
 namespace CalcRunner
 {
-    public partial class Form1 : Form
+    public partial class CalcRunnerForm : Form
     {
         
-        public Form1()
+        public CalcRunnerForm()
         {
             InitializeComponent();
+            myProcess = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -18,10 +19,13 @@ namespace CalcRunner
         }
         private void StartButton_Click(object sender, EventArgs e)
         {
-            myProcess = new Process();
-            //myProcess.StartInfo = new ProcessStartInfo("calc.exe");
-            myProcess.StartInfo = new ProcessStartInfo("D:\\Programs\\7-Zip\\7zFM.exe");
-            myProcess.Start();
+            if (myProcess == null)
+            {
+                myProcess = new Process();
+                //myProcess.StartInfo = new ProcessStartInfo("calc.exe");
+                myProcess.StartInfo = new ProcessStartInfo("D:\\Programs\\7-Zip\\7zFM.exe");
+                myProcess.Start();
+            }
         }
         private void StopButton_Click(object sender, EventArgs e)
         {

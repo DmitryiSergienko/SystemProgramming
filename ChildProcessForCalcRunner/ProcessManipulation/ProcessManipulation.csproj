@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{124EBFE2-8DA7-4A56-9E5A-6EC9F478CCFD}</ProjectGuid>
+    <ProjectGuid>{B2A91762-E9CB-408B-AA6D-54B5DE404C98}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CalcRunner</RootNamespace>
-    <AssemblyName>CalcRunner</AssemblyName>
+    <RootNamespace>ProcessManipulation</RootNamespace>
+    <AssemblyName>ProcessManipulation</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcRunnerForm.cs">
+    <Compile Include="ProcessManipulation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalcRunnerForm.Designer.cs">
-      <DependentUpon>CalcRunnerForm.cs</DependentUpon>
+    <Compile Include="ProcessManipulation.Designer.cs">
+      <DependentUpon>ProcessManipulation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CalcRunnerForm.resx">
-      <DependentUpon>CalcRunnerForm.cs</DependentUpon>
+    <EmbeddedResource Include="ProcessManipulation.resx">
+      <DependentUpon>ProcessManipulation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

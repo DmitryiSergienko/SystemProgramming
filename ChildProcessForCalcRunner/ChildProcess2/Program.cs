@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CalcRunner
+namespace ChildProcess2
 {
     internal static class Program
     {
@@ -10,7 +10,7 @@ namespace CalcRunner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CalcRunnerForm());
+            Application.Run(new ChildProcess2());
         }
     }
 }

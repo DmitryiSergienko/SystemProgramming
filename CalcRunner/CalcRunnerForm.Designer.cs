@@ -1,6 +1,6 @@
 ﻿namespace CalcRunner
 {
-    partial class Form1
+    partial class CalcRunnerForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

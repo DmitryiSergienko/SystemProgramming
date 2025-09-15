@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessManipulation));
             this.StartedAssemblies = new System.Windows.Forms.ListBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
@@ -44,96 +45,71 @@
             // StartedAssemblies
             // 
             this.StartedAssemblies.FormattingEnabled = true;
-            this.StartedAssemblies.ItemHeight = 25;
-            this.StartedAssemblies.Location = new System.Drawing.Point(6, 30);
+            resources.ApplyResources(this.StartedAssemblies, "StartedAssemblies");
             this.StartedAssemblies.Name = "StartedAssemblies";
-            this.StartedAssemblies.Size = new System.Drawing.Size(284, 354);
-            this.StartedAssemblies.TabIndex = 0;
+            this.StartedAssemblies.SelectedIndexChanged += new System.EventHandler(this.StartedAssemblies_SelectedIndexChanged);
             // 
             // buttonStart
             // 
-            this.buttonStart.Enabled = false;
-            this.buttonStart.Location = new System.Drawing.Point(314, 84);
+            resources.ApplyResources(this.buttonStart, "buttonStart");
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(172, 52);
-            this.buttonStart.TabIndex = 2;
-            this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonStop
             // 
-            this.buttonStop.Enabled = false;
-            this.buttonStop.Location = new System.Drawing.Point(314, 142);
+            resources.ApplyResources(this.buttonStop, "buttonStop");
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(172, 52);
-            this.buttonStop.TabIndex = 3;
-            this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // buttonCloseWindow
             // 
-            this.buttonCloseWindow.Enabled = false;
-            this.buttonCloseWindow.Location = new System.Drawing.Point(314, 200);
+            this.buttonCloseWindow.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.buttonCloseWindow, "buttonCloseWindow");
             this.buttonCloseWindow.Name = "buttonCloseWindow";
-            this.buttonCloseWindow.Size = new System.Drawing.Size(172, 52);
-            this.buttonCloseWindow.TabIndex = 4;
-            this.buttonCloseWindow.Text = "CloseWindow";
             this.buttonCloseWindow.UseVisualStyleBackColor = true;
+            this.buttonCloseWindow.Click += new System.EventHandler(this.buttonCloseWindow_Click);
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Enabled = false;
-            this.buttonRefresh.Location = new System.Drawing.Point(314, 258);
+            resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(172, 52);
-            this.buttonRefresh.TabIndex = 5;
-            this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonRunCalc
             // 
-            this.buttonRunCalc.Enabled = false;
-            this.buttonRunCalc.Location = new System.Drawing.Point(314, 316);
+            resources.ApplyResources(this.buttonRunCalc, "buttonRunCalc");
             this.buttonRunCalc.Name = "buttonRunCalc";
-            this.buttonRunCalc.Size = new System.Drawing.Size(172, 52);
-            this.buttonRunCalc.TabIndex = 6;
-            this.buttonRunCalc.Text = "RunCalc";
             this.buttonRunCalc.UseVisualStyleBackColor = true;
+            this.buttonRunCalc.Click += new System.EventHandler(this.buttonRunCalc_Click);
             // 
             // groupBoxRunningProcesses
             // 
             this.groupBoxRunningProcesses.Controls.Add(this.StartedAssemblies);
-            this.groupBoxRunningProcesses.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.groupBoxRunningProcesses, "groupBoxRunningProcesses");
             this.groupBoxRunningProcesses.Name = "groupBoxRunningProcesses";
-            this.groupBoxRunningProcesses.Size = new System.Drawing.Size(296, 405);
-            this.groupBoxRunningProcesses.TabIndex = 7;
             this.groupBoxRunningProcesses.TabStop = false;
-            this.groupBoxRunningProcesses.Text = "Running processes";
             // 
             // groupBoxAvailableBuilds
             // 
             this.groupBoxAvailableBuilds.Controls.Add(this.AvailableAssemblies);
-            this.groupBoxAvailableBuilds.Location = new System.Drawing.Point(492, 12);
+            resources.ApplyResources(this.groupBoxAvailableBuilds, "groupBoxAvailableBuilds");
             this.groupBoxAvailableBuilds.Name = "groupBoxAvailableBuilds";
-            this.groupBoxAvailableBuilds.Size = new System.Drawing.Size(270, 405);
-            this.groupBoxAvailableBuilds.TabIndex = 8;
             this.groupBoxAvailableBuilds.TabStop = false;
-            this.groupBoxAvailableBuilds.Text = "Available builds";
             // 
             // AvailableAssemblies
             // 
             this.AvailableAssemblies.FormattingEnabled = true;
-            this.AvailableAssemblies.ItemHeight = 25;
-            this.AvailableAssemblies.Location = new System.Drawing.Point(6, 30);
+            resources.ApplyResources(this.AvailableAssemblies, "AvailableAssemblies");
             this.AvailableAssemblies.Name = "AvailableAssemblies";
-            this.AvailableAssemblies.Size = new System.Drawing.Size(258, 354);
-            this.AvailableAssemblies.TabIndex = 0;
+            this.AvailableAssemblies.SelectedIndexChanged += new System.EventHandler(this.AvailableAssemblies_SelectedIndexChanged);
             // 
             // ProcessManipulation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 429);
             this.Controls.Add(this.groupBoxAvailableBuilds);
             this.Controls.Add(this.groupBoxRunningProcesses);
             this.Controls.Add(this.buttonRunCalc);
@@ -142,7 +118,6 @@
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Name = "ProcessManipulation";
-            this.Text = "Process Manipulation";
             this.groupBoxRunningProcesses.ResumeLayout(false);
             this.groupBoxAvailableBuilds.ResumeLayout(false);
             this.ResumeLayout(false);

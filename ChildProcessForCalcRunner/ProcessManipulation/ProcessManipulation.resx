@@ -117,4 +117,252 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StartedAssemblies.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="StartedAssemblies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="StartedAssemblies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 354</value>
+  </data>
+  <data name="StartedAssemblies.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;StartedAssemblies.Name" xml:space="preserve">
+    <value>StartedAssemblies</value>
+  </data>
+  <data name="&gt;&gt;StartedAssemblies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartedAssemblies.Parent" xml:space="preserve">
+    <value>groupBoxRunningProcesses</value>
+  </data>
+  <data name="&gt;&gt;StartedAssemblies.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonStart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 84</value>
+  </data>
+  <data name="buttonStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 52</value>
+  </data>
+  <data name="buttonStart.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;buttonStart.Name" xml:space="preserve">
+    <value>buttonStart</value>
+  </data>
+  <data name="&gt;&gt;buttonStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStart.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonStop.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 142</value>
+  </data>
+  <data name="buttonStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 52</value>
+  </data>
+  <data name="buttonStop.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonStop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.Name" xml:space="preserve">
+    <value>buttonStop</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonCloseWindow.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonCloseWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 200</value>
+  </data>
+  <data name="buttonCloseWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 52</value>
+  </data>
+  <data name="buttonCloseWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonCloseWindow.Text" xml:space="preserve">
+    <value>CloseWindow</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Name" xml:space="preserve">
+    <value>buttonCloseWindow</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCloseWindow.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonRefresh.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 258</value>
+  </data>
+  <data name="buttonRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 52</value>
+  </data>
+  <data name="buttonRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Name" xml:space="preserve">
+    <value>buttonRefresh</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonRunCalc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 316</value>
+  </data>
+  <data name="buttonRunCalc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 52</value>
+  </data>
+  <data name="buttonRunCalc.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonRunCalc.Text" xml:space="preserve">
+    <value>RunCalc</value>
+  </data>
+  <data name="&gt;&gt;buttonRunCalc.Name" xml:space="preserve">
+    <value>buttonRunCalc</value>
+  </data>
+  <data name="&gt;&gt;buttonRunCalc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRunCalc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRunCalc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxRunningProcesses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxRunningProcesses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 405</value>
+  </data>
+  <data name="groupBoxRunningProcesses.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBoxRunningProcesses.Text" xml:space="preserve">
+    <value>Running processes</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRunningProcesses.Name" xml:space="preserve">
+    <value>groupBoxRunningProcesses</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRunningProcesses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRunningProcesses.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRunningProcesses.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AvailableAssemblies.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="AvailableAssemblies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="AvailableAssemblies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 354</value>
+  </data>
+  <data name="AvailableAssemblies.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AvailableAssemblies.Name" xml:space="preserve">
+    <value>AvailableAssemblies</value>
+  </data>
+  <data name="&gt;&gt;AvailableAssemblies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AvailableAssemblies.Parent" xml:space="preserve">
+    <value>groupBoxAvailableBuilds</value>
+  </data>
+  <data name="&gt;&gt;AvailableAssemblies.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxAvailableBuilds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>492, 12</value>
+  </data>
+  <data name="groupBoxAvailableBuilds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 405</value>
+  </data>
+  <data name="groupBoxAvailableBuilds.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBoxAvailableBuilds.Text" xml:space="preserve">
+    <value>Available builds</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAvailableBuilds.Name" xml:space="preserve">
+    <value>groupBoxAvailableBuilds</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAvailableBuilds.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAvailableBuilds.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAvailableBuilds.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>774, 429</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Process Manipulation</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProcessManipulation</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

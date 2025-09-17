@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchWord", "CalcRunner\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadAndCanceledToken", "ThreadAndCanceledToken\ThreadAndCanceledToken.csproj", "{C68B5B47-7F7C-41AC-B228-7D2F4F9DB864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountJSON", "AccountJSON\AccountJSON.csproj", "{59A02D22-4075-49DB-9CE9-74FA14F6EADA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{C68B5B47-7F7C-41AC-B228-7D2F4F9DB864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C68B5B47-7F7C-41AC-B228-7D2F4F9DB864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C68B5B47-7F7C-41AC-B228-7D2F4F9DB864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

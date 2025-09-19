@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadAndCanceledToken", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountJSON", "AccountJSON\AccountJSON.csproj", "{59A02D22-4075-49DB-9CE9-74FA14F6EADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentBag", "ConcurrentBag\ConcurrentBag.csproj", "{A4696FC1-F98D-42E7-9929-35B6A238D0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentBagParallelFor", "ConcurrentBagParallelFor\ConcurrentBagParallelFor.csproj", "{FBDE69E0-9FB9-4D8A-B1F5-0E620B043A2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59A02D22-4075-49DB-9CE9-74FA14F6EADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4696FC1-F98D-42E7-9929-35B6A238D0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4696FC1-F98D-42E7-9929-35B6A238D0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4696FC1-F98D-42E7-9929-35B6A238D0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4696FC1-F98D-42E7-9929-35B6A238D0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDE69E0-9FB9-4D8A-B1F5-0E620B043A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDE69E0-9FB9-4D8A-B1F5-0E620B043A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDE69E0-9FB9-4D8A-B1F5-0E620B043A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDE69E0-9FB9-4D8A-B1F5-0E620B043A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

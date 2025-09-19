@@ -30,25 +30,25 @@ class Program
         var accountManager = new AccountManager("accounts.json");
 
         // Создание и запуск нескольких потоков
-        Thread thread1 = new Thread(() => accountManager.UpdateAccount("Alice", 100));
-        Thread thread2 = new Thread(() => accountManager.UpdateAccount("Bob", -50));
-        Thread thread3 = new Thread(() => accountManager.UpdateAccount("Alice", -30));
+        //Thread thread1 = new Thread(() => accountManager.UpdateAccount("Alice", 100));
+        //Thread thread2 = new Thread(() => accountManager.UpdateAccount("Bob", -50));
+        //Thread thread3 = new Thread(() => accountManager.UpdateAccount("Alice", -30));
 
-        thread1.Start();
-        thread2.Start();
-        thread3.Start();
+        //thread1.Start();
+        //thread2.Start();
+        //thread3.Start();
 
-        thread1.Join();
-        thread2.Join();
-        thread3.Join();
+        //thread1.Join();
+        //thread2.Join();
+        //thread3.Join();
 
         // Запускаем задачи через Task.Factory.StartNew
-        // var task1 = Task.Factory.StartNew(() => accountManager.UpdateAccount("Alice", 100));
-        // var task2 = Task.Factory.StartNew(() => accountManager.UpdateAccount("Bob", -50));
-        // var task3 = Task.Factory.StartNew(() => accountManager.UpdateAccount("Alice", -30));
+        var task1 = Task.Run(() => accountManager.UpdateAccount("Alice", 100));
+        var task2 = Task.Run(() => accountManager.UpdateAccount("Bob", -50));
+        var task3 = Task.Run(() => accountManager.UpdateAccount("Alice", -30));
 
         // Ждём завершения всех задач
-        // Task.WaitAll(task1, task2, task3);
+        Task.WaitAll(task1, task2, task3);
 
         Console.WriteLine("Обновления завершены.");
     }

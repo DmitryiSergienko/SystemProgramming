@@ -82,26 +82,76 @@ public class AccountManager
 
     private Dictionary<string, ClientAccount> LoadAccounts()
     {
+        //Для Thread
+        //if (!File.Exists(_filePath))
+        //{
+        //    // Создать файл с начальными данными
+        //    var initialAccounts = new Dictionary<string, ClientAccount>
+        //    {
+        //        { "Alice", new ClientAccount { Name = "Alice", Balance = 100.00m } },
+        //        { "Bob", new ClientAccount { Name = "Bob", Balance = 50.00m } }
+        //    };
+
+        //    SaveAccounts(initialAccounts); // Сохранить начальные данные в файл
+        //    return initialAccounts;
+        //}
+
+        //var json = File.ReadAllText(_filePath);
+        //return JsonConvert.DeserializeObject<Dictionary<string, ClientAccount>>(json);
+
+        //Для Task
         if (!File.Exists(_filePath))
         {
-            // Создать файл с начальными данными
             var initialAccounts = new Dictionary<string, ClientAccount>
-            {
-                { "Alice", new ClientAccount { Name = "Alice", Balance = 100.00m } },
-                { "Bob", new ClientAccount { Name = "Bob", Balance = 50.00m } }
-            };
-
-            SaveAccounts(initialAccounts); // Сохранить начальные данные в файл
+        {
+            { "Alice", new ClientAccount { Name = "Alice", Balance = 100.00m } },
+            { "Bob", new ClientAccount { Name = "Bob", Balance = 50.00m } }
+        };
+            SaveAccounts(initialAccounts);
             return initialAccounts;
         }
 
-        var json = File.ReadAllText(_filePath);
-        return JsonConvert.DeserializeObject<Dictionary<string, ClientAccount>>(json);
+        for (int attempt = 0; attempt < 5; attempt++)
+        {
+            try
+            {
+                var json = File.ReadAllText(_filePath);
+                return JsonConvert.DeserializeObject<Dictionary<string, ClientAccount>>(json) ??
+                       new Dictionary<string, ClientAccount>();
+            }
+            catch (IOException)
+            {
+                if (attempt == 4) throw;
+                System.Threading.Thread.Sleep(20);
+            }
+        }
+
+        return new Dictionary<string, ClientAccount>(); // fallback (не должно сюда дойти)
     }
 
     private void SaveAccounts(Dictionary<string, ClientAccount> accounts)
     {
+        //Для Thread
+        //var json = JsonConvert.SerializeObject(accounts, Formatting.Indented);
+        //File.WriteAllText(_filePath, json);
+
+        //Для Task
         var json = JsonConvert.SerializeObject(accounts, Formatting.Indented);
-        File.WriteAllText(_filePath, json);
+
+        for (int attempt = 0; attempt < 5; attempt++) // Пробуем до 5 раз
+        {
+            try
+            {
+                File.WriteAllText(_filePath, json);
+                return; // Успех — выходим
+            }
+            catch (IOException)
+            {
+                if (attempt == 4) // Последняя попытка не удалась — бросаем исключение
+                    throw;
+
+                System.Threading.Thread.Sleep(20); // Ждём 20 мс и пробуем снова
+            }
+        }
     }
 }

@@ -46,10 +46,11 @@ internal class Program
         var stopwatchCB = Stopwatch.StartNew();
         Task cbTask = Task.Run(() =>
         {
-            for (int i = 0; i < COUNT; i++)
+            var range = Enumerable.Range(0, COUNT);
+            Parallel.ForEach(range, i =>
             {
-                cb.Add(array[i]);
-            }
+                cb.Add(rand.Next(1, 101));
+            });
 
             int localMinCB = SearchFirstLocalMinimum(cb.ToArray());
             if (localMinCB > 0)

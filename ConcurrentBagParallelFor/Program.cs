@@ -17,23 +17,25 @@ internal class Program
     private static void Main(string[] args)
     {
         Random rand = new Random();
-        const int COUNT = 100_000_000;
+        const int COUNT = 1_000_000;
 
         int[] array = new int[COUNT];
         ConcurrentBag<int> cb = new ConcurrentBag<int>();
 
+        for (int i = 0; i < COUNT; i++)
+        {
+            array[i] = rand.Next(1, 1001);
+            cb.Add(array[i]);
+        }
+
         var stopwatchArray = Stopwatch.StartNew();
         Task arrayTask = Task.Run(() =>
         {
-            for (int i = 0; i < COUNT; i++)
-            {
-                array[i] = rand.Next(1, 101);
-            }
+            int localMinArray = SearchMinLocalMinimumArray(array);
 
-            int localMinArray = SearchFirstLocalMinimum(array);
             if (localMinArray > 0)
             {
-                Console.WriteLine($"Индекс первого локального минимума для массива: {localMinArray} - {array[localMinArray]}");
+                Console.WriteLine($"Индекс минимального локального минимума для массива: {localMinArray} со значением: {array[localMinArray]}");
             }
             else
             {
@@ -46,16 +48,10 @@ internal class Program
         var stopwatchCB = Stopwatch.StartNew();
         Task cbTask = Task.Run(() =>
         {
-            var range = Enumerable.Range(0, COUNT);
-            Parallel.ForEach(range, i =>
-            {
-                cb.Add(rand.Next(1, 101));
-            });
-
-            int localMinCB = SearchFirstLocalMinimum(cb.ToArray());
+            int localMinCB = SearchMinLoacalMinimumCB(cb);
             if (localMinCB > 0)
             {
-                Console.WriteLine($"Индекс первого локального минимума для списка: {localMinCB} - {cb.ToArray()[localMinCB]}");
+                Console.WriteLine($"Индекс минимального локального минимума для списка: {localMinCB} со значением: {cb.ToArray()[localMinCB]}");
             }
             else
             {
@@ -71,14 +67,43 @@ internal class Program
         Console.WriteLine($"\nВремя на выполнение алгоритма с массивом: {stopwatchArray.ElapsedMilliseconds} мс");
         Console.WriteLine($"Время на выполнение алгоритма со списком: {stopwatchCB.ElapsedMilliseconds} мс");        
     }
-    public static int SearchFirstLocalMinimum(int[] arr)
+    public static int SearchMinLocalMinimumArray(int[] arr)
     {
+        Dictionary<int, int> dictionary = new Dictionary<int, int>();
         for (int i = 1; i < arr.Length - 1; i++)
         {
             if (arr[i] < arr[i - 1] && arr[i] < arr[i + 1])
             {
-                return i;
+                dictionary.Add(i, arr[i]);
             }
+        }
+
+        if (dictionary.Count > 0)
+        {
+            var min = dictionary.MinBy(i => i.Value);
+            return min.Key;
+        }
+        return -1;
+    }
+    public static int SearchMinLoacalMinimumCB(ConcurrentBag<int> cb)
+    {
+        var list = cb.ToList();
+        if (list.Count < 3) return -1;
+        var dictionary = new ConcurrentDictionary<int, int>();
+        
+        var range = Enumerable.Range(1, list.Count - 2);
+        Parallel.ForEach(range, i =>
+        {
+            if (list[i] < list[i - 1] && list[i] < list[i + 1])
+            {
+                dictionary.TryAdd(i, list[i]);
+            }
+        });
+
+        if (dictionary.Count > 0)
+        {
+            var min = dictionary.MinBy(i => i.Value);
+            return min.Key;
         }
         return -1;
     }

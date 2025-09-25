@@ -12,6 +12,8 @@ C# использование последовательных и паралле
 */
 
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Running;
 using System.Collections.Concurrent;
 using System.Collections.Immutable;
@@ -24,6 +26,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        var config = DefaultConfig.Instance.AddExporter(CsvExporter.Default);
+
         BenchmarkRunner.Run<Examen>();
     }
 }
